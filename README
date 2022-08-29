@@ -1,0 +1,31 @@
+# requirement
+
+=> node -V v16.14.2
+=> npm -v 8.5.0
+
+1 clone github
+=>
+
+2 install production
+=> cd
+=> npm install
+
+3 start production
+=> nodemon or node app.js
+
+4 Open postman
+1 pass URL => http://127.0.0.1:3100/login method="POST"
+
+           => data json{ "name": "chan","email": "chan@gmail.com","password": "chan12" }
+
+2 enter
+
+5 pass URL => http://127.0.0.1:3100/user methon="GET" render All data => enter
+
+6 pass URL => http://127.0.0.1:3100/user/1 methon="GET" render data only => enter
+
+7 pass URL => http://127.0.0.1:3100/user/1 methon="PUT" Update data only => enter
+
+8 pass URL => http://127.0.0.1:3100/user/1 methon="delete" delete data only => enter
+
+9 pass URL => http://127.0.0.1:3100/logout methon="POST" Logout page => enter
