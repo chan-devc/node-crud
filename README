@@ -4,10 +4,10 @@
 => npm -v 8.5.0
 
 1 clone github
-=>
+=> https://github.com/chan-devc/node-crud.git
 
 2 install production
-=> cd
+=> cd node-crud
 => npm install
 
 3 start production
