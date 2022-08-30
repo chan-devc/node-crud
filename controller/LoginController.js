@@ -35,23 +35,22 @@ module.exports = {
       },
     });
     if (log_del) {
-      await log_del.destroy().then(async () => {
-        // user token
-        const token = jwtCreate(userJSON);
-
-        let log = {
-          user_Id: userJSON.uId,
-          log_token: "Bearer " + token,
-        };
-        // create Log
-        await LoginUser.create(log).then(() => {
-          return res.status(200).send({
-            user: userJSON.uId,
-            token: token, // create Token on User
-          });
-        });
-      });
+      await log_del.destroy();
     }
+    // user token
+    const token = jwtCreate(userJSON);
+
+    let log = {
+      user_Id: userJSON.uId,
+      log_token: "Bearer " + token,
+    };
+    // create Log
+    await LoginUser.create(log).then(() => {
+      return res.status(200).send({
+        user: userJSON.uId,
+        token: token, // create Token on User
+      });
+    });
   },
 
   // logout
